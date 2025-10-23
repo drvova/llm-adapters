@@ -73,7 +73,6 @@ repos:
           - openai == 1.52.2
           - cohere == 5.11.1
           - google-generativeai == 0.8.3
-          - vertexai == 1.70.0
           - brotli == 1.1.0
   # - repo: https://github.com/PyCQA/bandit
   #   rev: 1.7.10
