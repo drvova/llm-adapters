@@ -1,30 +1,19 @@
 [tool.poetry]
-name = "martian-adapters"
-version = "7.0.0a2"
-description = "Adapters as API gateways to Different LLM Models"
-authors = ["Martian team <team@withmartian.com>"]
-readme = "README.md"
-packages = [{ include = "adapters", from = "." }]
+name = "martian-adapters-rust"
+version = "0.0.0"
+description = "Tooling support for the martian-adapters Rust project"
+authors = ["Martian AI <team@withmartian.com>"]
+package-mode = false
+packages = [{ include = "tooling", from = "." }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-pydantic = "^2.9.2"
-anthropic = "^0.39.0"
-openai = "^1.54.1"
-cohere = "^5.11.3"
-google-generativeai = "^0.8.3"
-brotli = "^1.1.0"
 
-[tool.poetry.group.test.dependencies]
-pytest = "^8.3.3"
-pytest-dotenv = "^0.5.2"
-pytest-asyncio = "^0.24.0"
-pytest-recording = "^0.13.2"
-mypy = "^1.13.0"
-vcrpy = "^6.0.2"
-ruff = "^0.7.2"
-pytest-xdist = "^3.6.1"
+[tool.poetry.scripts]
+ruff = "tooling.cli:run_ruff"
+mypy = "tooling.cli:run_mypy"
+pytest = "tooling.cli:run_pytest"
 
-
-[tool.poetry.group.dev.dependencies]
-pre-commit = "^4.0.1"
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
