@@ -1,0 +1,138 @@
+# Provider-specific capability defaults
+# These values are merged with models.dev metadata to determine final model capabilities
+
+[openai]
+supports_system = true
+supports_multiple_system = true
+supports_repeating_roles = true
+supports_empty_content = true
+supports_tool_choice = true
+supports_tool_choice_required = true
+supports_json_output = true
+supports_json_content = true
+supports_last_assistant = true
+supports_first_assistant = true
+supports_only_system = true
+supports_only_assistant = true
+supports_user = true
+supports_n = true
+supports_streaming = true
+
+[anthropic]
+supports_system = true
+supports_multiple_system = false
+supports_repeating_roles = false
+supports_empty_content = false
+supports_tool_choice = true
+supports_tool_choice_required = true
+supports_json_output = true
+supports_json_content = true
+supports_last_assistant = true
+supports_first_assistant = false
+supports_only_system = false
+supports_only_assistant = false
+supports_user = true
+supports_n = false
+supports_streaming = true
+
+[cohere]
+supports_system = true
+supports_multiple_system = false
+supports_repeating_roles = false
+supports_empty_content = false
+supports_tool_choice = false
+supports_tool_choice_required = false
+supports_json_output = true
+supports_json_content = false
+supports_last_assistant = false
+supports_first_assistant = false
+supports_only_system = false
+supports_only_assistant = false
+supports_user = true
+supports_n = false
+supports_streaming = true
+
+[gemini]
+supports_system = true
+supports_multiple_system = false
+supports_repeating_roles = false
+supports_empty_content = false
+supports_tool_choice = true
+supports_tool_choice_required = false
+supports_json_output = true
+supports_json_content = true
+supports_last_assistant = false
+supports_first_assistant = true
+supports_only_system = false
+supports_only_assistant = false
+supports_user = true
+supports_n = true
+supports_streaming = true
+
+[azure]
+supports_system = true
+supports_multiple_system = true
+supports_repeating_roles = true
+supports_empty_content = true
+supports_tool_choice = true
+supports_tool_choice_required = false
+supports_json_output = true
+supports_json_content = true
+supports_last_assistant = true
+supports_first_assistant = true
+supports_only_system = true
+supports_only_assistant = true
+supports_user = true
+supports_n = true
+supports_streaming = true
+
+[groq]
+supports_system = true
+supports_multiple_system = true
+supports_repeating_roles = true
+supports_empty_content = true
+supports_tool_choice = true
+supports_tool_choice_required = true
+supports_json_output = true
+supports_json_content = true
+supports_last_assistant = true
+supports_first_assistant = true
+supports_only_system = true
+supports_only_assistant = true
+supports_user = true
+supports_n = true
+supports_streaming = true
+
+[fireworks]
+supports_system = true
+supports_multiple_system = true
+supports_repeating_roles = true
+supports_empty_content = true
+supports_tool_choice = true
+supports_tool_choice_required = true
+supports_json_output = true
+supports_json_content = true
+supports_last_assistant = true
+supports_first_assistant = true
+supports_only_system = true
+supports_only_assistant = true
+supports_user = true
+supports_n = true
+supports_streaming = true
+
+[together]
+supports_system = true
+supports_multiple_system = true
+supports_repeating_roles = true
+supports_empty_content = true
+supports_tool_choice = true
+supports_tool_choice_required = true
+supports_json_output = true
+supports_json_content = true
+supports_last_assistant = true
+supports_first_assistant = true
+supports_only_system = true
+supports_only_assistant = true
+supports_user = true
+supports_n = true
+supports_streaming = true
