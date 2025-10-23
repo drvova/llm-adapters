@@ -317,7 +317,7 @@ class SDKChatAdapter(
             raise ValueError("Model is not set")
         return self._current_model
 
-    def get_model_properteis(self, model_name: str) -> ModelProperties:
+    def get_model_properties(self, model_name: str) -> ModelProperties:
         for model in self.get_supported_models():
             if model.name == model_name:
                 return model.properties
@@ -372,8 +372,6 @@ class SDKChatAdapter(
                 finally:
                     if hasattr(response, "close"):
                         await response.close()
-                    # elif hasattr(response, "aclose"):  # For Cohere SDK
-                    # await response.aclose()
 
         return AdapterStreamAsyncChatCompletion(response=stream_response())
 

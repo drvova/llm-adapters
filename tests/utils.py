@@ -160,8 +160,8 @@ def get_response_content_from_vcr(vcr: VCR, adapter: BaseAdapter) -> Any:
 
     try:
         response = brotli.decompress(response)
-    except Exception as _:  # pylint: disable=W0718
-        print("Failed to decompress response")
+    except Exception:
+        pass
 
     response = json.loads(response)
 
@@ -186,8 +186,8 @@ def get_response_choices_from_vcr(vcr: VCR, adapter: BaseAdapter) -> Any:
 
     try:
         response = brotli.decompress(response)
-    except Exception as _:  # pylint: disable=W0718
-        print("Failed to decompress response")
+    except Exception:
+        pass
 
     response = json.loads(response)
 
@@ -264,8 +264,5 @@ def get_response_choices_from_vcr(vcr: VCR, adapter: BaseAdapter) -> Any:
                     )
 
         return cohere_choices
-
-    # elif isinstance(adapter, GeminiSDKChatProviderAdapter):
-    # return response["candidates"][0]["content"]["parts"][0]["text"]
     else:
         raise ValueError("Unknown adapter")
