@@ -1,0 +1,52 @@
+[package]
+name = "martian-adapters"
+version = "0.1.0"
+edition = "2021"
+authors = ["Martian Team"]
+description = "Unified chat-completions interface across many LLM providers"
+license = "Apache-2.0"
+repository = "https://github.com/martian-ai/martian-adapters"
+readme = "README.md"
+keywords = ["llm", "ai", "chat", "openai", "anthropic"]
+categories = ["api-bindings", "asynchronous"]
+
+[dependencies]
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+async-trait = "0.1"
+futures = "0.3"
+
+# HTTP client
+reqwest = { version = "0.12", features = ["json", "stream", "rustls-tls"] }
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Concurrency & caching
+dashmap = "5.5"
+once_cell = "1.19"
+
+# Configuration
+dotenvy = "0.15"
+toml = "0.8"
+
+# Image processing
+base64 = "0.22"
+
+# Utilities
+url = "2.5"
+uuid = { version = "1.0", features = ["v4"] }
+regex = "1.10"
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockito = "1.0"
+
+[lib]
+name = "martian_adapters"
+path = "src/lib.rs"

@@ -1,0 +1,25 @@
+# Vendor extraction patterns
+# Used to map model names to vendor names when not explicitly provided
+
+[patterns]
+"^gpt-" = "openai"
+"^o1-" = "openai"
+"^claude-" = "anthropic"
+"^llama" = "meta-llama"
+"^gemini-" = "google"
+"^command-" = "cohere"
+"^mixtral" = "mistralai"
+"^mistral" = "mistralai"
+"^qwen" = "qwen"
+"^deepseek" = "deepseek"
+"^phi-" = "microsoft"
+
+[provider_defaults]
+openai = "openai"
+anthropic = "anthropic"
+cohere = "cohere"
+gemini = "google"
+groq = "groq"
+fireworks = "fireworks"
+together = "together"
+azure = "openai"
